@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Sahil from "./Sahil";
+import UseEffect from "./UseEffect";
 
 function App() {
   let [click, setClick] = useState(0);
@@ -26,7 +26,7 @@ function App() {
       <button onClick={increment_click}>increment</button>
       <button onClick={decrement_click}>decrement</button>
       <p>{click}</p>
-      <Sahil />
+      <UseEffect />
     </>
   );
 }

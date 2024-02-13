@@ -5,9 +5,6 @@ function App() {
   return (
     <>
       <StateUpdate></StateUpdate>
-      <input type="text" />
-      <button>add</button>
-      <button>remove</button>
     </>
   );
 }

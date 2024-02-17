@@ -1,15 +1,23 @@
 import { useState } from "react";
-let newName = "dilipkumar";
+// let newName = "dilipkumar";
+
 let array = ["sahil", "rahil", "shailee"];
-function StateUpdate() {
-  let [state, setState] = useState(array);
-  function remove() {
-    state = array.pop();
-    setState(state);
-  }
+
+function StateUpdate(){
+  let [name, setName] = useState(array)
+
   function add() {
-    state = array.push(newName);
-    setState(state);
+    let nameId = document.getElementById("nameId").value;
+console.log(nameId);
+nameId = "";
+
+// console.log(nameId);
+// name = name + nameId;
+// setName(name)
+  }
+
+  function remove() {
+
   }
   return (
     <>
@@ -18,11 +26,13 @@ function StateUpdate() {
           <li key={index}>{value}</li>
         ))}
       </div>
-      <input type="text" />
+      <input type="text" id="nameId"/>
       <button onClick={remove}>delete</button>
       <button onClick={add}>add</button>
     </>
   );
 }
+
+
 
 export default StateUpdate;

@@ -1,7 +1,7 @@
 import React from "react";
 import Child from "./child";
 import { useState } from "react";
-
+let nameArr  = ["Sahil", "Harsh"]
 function Parent() {
   const [click, setCLick] = useState(0);
   function tap() {
@@ -10,7 +10,7 @@ function Parent() {
   }
   return (
     <div>
-      <Child name="sahil" clicks={click} />
+      <Child name={nameArr} clicks={click} />
       <button onClick={tap}>tap to count Click</button>
     </div>
   );

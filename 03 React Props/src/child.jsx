@@ -1,12 +1,15 @@
 import React from "react";
 import Ul from "./ul";
-function Child(props) {
+
+
+function Child({name , clicks}) {
+
   return (
     <div>
       <h1>
-        hello im {props.name} and i clicked {props.clicks} times
+        hello im {name || "name"} and i clicked {clicks} times
       </h1>
-      <Ul></Ul>
+      <Ul newname = "Whonix"></Ul>
     </div>
   );
 }

@@ -1,6 +1,20 @@
 import React from "react";
+import { useTodo } from "../Context";
+import { useState } from "react";
 
-function TodoDisplay() {
+function TodoDisplay({ todo }) {
+  const { updateTodo, deleteTodo, toggleComplete } = useTodo();
+  const [todoMsg, setTodoMsg] = useState(todo.todo);
+  const [isTodoEditable, setIsTodoEditable] = useState(false);
+
+  const editTodo = () => {
+    updateTodo(todo.id, { ...todo, todo: todoMsg });
+    setIsTodoEditable(false);
+  };
+
+  const toggleCompleted = () => {
+    toggleComplete(todo.id);
+  };
   return (
     <>
       <div
@@ -40,7 +54,10 @@ function TodoDisplay() {
         {/* Delete Todo Button */}
         <button
           className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"
-          onClick={() => deleteTodo(todo.id)}
+          onClick={() => {
+            deleteTodo(todo.id);
+            console.log("todoDelete clicked");
+          }}
         >
           ❌
         </button>

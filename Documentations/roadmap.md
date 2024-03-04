@@ -2,20 +2,20 @@ React Roadmap
 
 Fundamentals
 
-Functional Component
-JSX
-Import Export component
-react Fragment
-Props
-State
-useState Hook
+Functional Component --
+JSX --
+Import Export component --
+react Fragment --
+Props --
+State --
+useState Hook --
 Conditional Rendering
-Lists and Keys
+Lists and Keys --
 Event Handling
 Form Handling
 Composition VS Inheritance
 Components Lifecycles
-useEffect Hook
+useEffect Hook --
 
 addons
 
@@ -23,16 +23,16 @@ React query
 NextJS
 React Virtualized (Scroll)
 stateManagement {
-zustand / React ReduxToolkit
+zustand / React ReduxToolkit --
 tanStack Query / RTK(reduxToolKit) Query
 }
 Routing {
-ReactRouting
+ReactRouting --
 TanStack Router
 }
 styling {
 styledComponents/emotion
-Tailwind CSS
+Tailwind CSS --
 Material UI / Mantine / ShadCN
 React Spring (Animation)
 }
@@ -61,8 +61,8 @@ delete,
 }
 
 Context{
-createContext,
-useContext
+createContext, --
+useContext --
 },
 
 refs{
@@ -98,7 +98,7 @@ Suspense
 
 Performace {
 useMemo,
-useCallback,
+useCallback, --
 useTransition,
 UseDefferedValue,
 memo,

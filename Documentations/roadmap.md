@@ -134,3 +134,29 @@ addons and changes =
 https://youtu.be/iIoP4Cws6m0?si=xSUYEqQSnn08VvkX
 https://youtu.be/jC3YhBFKZxI?si=jmO3Tte0MqmaKBL0
 React 19 = https://youtu.be/v07gXY6ESEo?si=3OeMAW0tdkBnbYs7
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+javascript
+
+classes
+functions
+CRUD oprations
+map,filter and reduce
+async/await
+
+react js
+
+redux toolkit
+CRUD opration
+react events
+React Virtualized (Scroll)
+event and form handling
+
+new topics to learn
+
+react query
+framer motion
+next js
+typescript
+react and javascript debugging

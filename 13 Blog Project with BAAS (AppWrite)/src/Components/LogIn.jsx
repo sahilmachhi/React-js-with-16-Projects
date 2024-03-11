@@ -6,8 +6,8 @@ import AuthService from "../Auth/Auth";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { login as authLogin } from "../Store/authSlice";
-
-function LogIn() {
+import { useState } from "react";
+function logIn() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
@@ -34,9 +34,7 @@ function LogIn() {
           className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}
         >
           <div className="mb-2 flex justify-center">
-            <span className="inline-block w-full max-w-[100px]">
-              <Logo width="100%" />
-            </span>
+            <span className="inline-block w-full max-w-[100px]"></span>
           </div>
           <h2 className="text-center text-2xl font-bold leading-tight">
             Sign in to your account
@@ -86,4 +84,4 @@ function LogIn() {
   );
 }
 
-export default LogIn;
+export default logIn;

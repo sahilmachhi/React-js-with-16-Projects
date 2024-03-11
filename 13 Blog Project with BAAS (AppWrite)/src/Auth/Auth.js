@@ -1,21 +1,22 @@
 import { Client, Account, ID } from "appwrite";
+import conf from "../Conf/Conf";
 
-function defaultWay() {
-    const client = new Client()
-        .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
-        .setProject('65e8311c89305a3fe3a7');
+// function defaultWay() {
+//     const client = new Client()
+//         .setEndpoint(conf.appwriteUrl) // Your API Endpoint
+//         .setProject(conf.appwriteProjectId);
 
-    const account = new Account(client);
+//     const account = new Account(client);
 
-    // sign up
-    const promise = account.create(ID.unique(), 'email@example.com', 'password');
+//     // sign up
+//     const promise = account.create(ID.unique(), 'email@example.com', 'password');
 
-    promise.then(function (response) {
-        console.log(response); // Success
-    }, function (error) {
-        console.log(error); // Failure
-    });
-}
+//     promise.then(function (response) {
+//         console.log(response); // Success
+//     }, function (error) {
+//         console.log(error); // Failure
+//     });
+// }
 
 export class AuthService {
     client = new Client();
@@ -23,8 +24,8 @@ export class AuthService {
 
     constructor() {
         this.client
-            .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
-            .setProject('65e8311c89305a3fe3a7');
+            .setEndpoint(conf.appwriteUrl) // Your API Endpoint
+            .setProject(conf.appwriteProjectId);
         this.account = new Account(this.client);
     }
 

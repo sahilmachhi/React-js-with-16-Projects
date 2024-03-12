@@ -26,7 +26,8 @@ export class Service {
                     featuredImage,
                     status,
                     userId,
-                }
+                },
+                console.log("create file done")
             )
         } catch (error) {
             console.log("Appwrite serive :: createPost :: error", error);
@@ -73,7 +74,6 @@ export class Service {
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug
-
             )
         } catch (error) {
             console.log("Appwrite serive :: getPost :: error", error);
@@ -87,8 +87,6 @@ export class Service {
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 queries,
-
-
             )
         } catch (error) {
             console.log("Appwrite serive :: getPosts :: error", error);
@@ -101,9 +99,12 @@ export class Service {
     async uploadFile(file) {
         try {
             return await this.bucket.createFile(
+
                 conf.appwriteBucketId,
                 ID.unique(),
-                file
+                file,
+                console.log("file upload done")
+
             )
         } catch (error) {
             console.log("Appwrite serive :: uploadFile :: error", error);

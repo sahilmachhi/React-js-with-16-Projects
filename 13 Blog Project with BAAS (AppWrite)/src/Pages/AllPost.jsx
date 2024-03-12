@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import appwriteService from "../Auth/Config";
 
 import PostCard from "../Components/PostCard";
@@ -6,7 +6,6 @@ import React from "react";
 
 function AllPost() {
   const [posts, setPosts] = useState([]);
-  useEffect(() => {}, []);
   appwriteService.getPosts([]).then((posts) => {
     if (posts) {
       setPosts(posts.documents);

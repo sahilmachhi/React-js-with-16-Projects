@@ -183,6 +183,7 @@ export default function PostForm({ post }) {
           ...data,
           userId: userData.$id,
         });
+        console.log(userData.$id);
 
         if (dbPost) {
           navigate(`/post/${dbPost.$id}`);

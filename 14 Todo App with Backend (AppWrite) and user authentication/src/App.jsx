@@ -5,6 +5,7 @@ function App() {
   return (
     <>
       <h1 className="bg-red-700">hello tailwind</h1>
+      <img src="./" alt="" />
     </>
   );
 }

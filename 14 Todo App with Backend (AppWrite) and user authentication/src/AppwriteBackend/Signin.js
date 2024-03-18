@@ -13,6 +13,6 @@ function signIn({ username, email, password }) {
     })
 
 
-};
+}
 
 export default signIn

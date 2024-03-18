@@ -1,11 +1,9 @@
-import login from "./AppwriteBackend/Signin";
-
+import Hero from "./Components/Hero/Hero";
 function App() {
   // login("sahil", "akdhfjskjhas@gmail.com", "sgfjhsddfsdf");
   return (
     <>
-      <h1 className="bg-red-700">hello tailwind</h1>
-      <img src="./" alt="" />
+      <Hero />
     </>
   );
 }

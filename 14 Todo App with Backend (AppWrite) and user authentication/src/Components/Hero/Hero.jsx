@@ -1,9 +1,9 @@
-import Input from "../Input/Input";
+import TodoForm from "../TodoForm/TodoForm";
 import Todo from "../Todo/Todo";
 function Hero() {
   return (
     <>
-      <Input />
+      <TodoForm />
       <Todo />
     </>
   );

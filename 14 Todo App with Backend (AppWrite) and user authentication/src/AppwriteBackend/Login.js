@@ -9,10 +9,10 @@ export function signin() {
     // console.log(account)
 
     const client = new Client()
-        .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
+        .setEndpoint(backendData.appwriteUrl) // Your API Endpoint
         .setProject(backendData.projectID);                 // Your project ID
-
     const account = new Account(client);
+
 
     const promise = account.createEmailSession('whonix29@gmail.com', 'sahilsss');
 

@@ -1,12 +1,13 @@
-import { account } from "./UserAuth";
-// import ID from "appwrite"
+import { account, ID } from "./UserAuth";
+import { LogIn } from "./Login"
 
-function signIn({ username, email, password }) {
-    const promise = account.create(username, email, password)
+export function SignIn(email, username, password) {
+    const promise = account.create(ID.unique(), email, username, password)
 
     promise.then((res) => {
         console.log(res);
-        console.log("login successful");
+        LogIn(email, password)
+        console.log("account create successful");
     }, (err) => {
         console.log(err);
         console.log("login failed");
@@ -15,4 +16,3 @@ function signIn({ username, email, password }) {
 
 }
 
-export default signIn

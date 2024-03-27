@@ -3,7 +3,7 @@ import { client } from "../AppwriteBackend/UserAuth";
 import backendData from "../assets/env";
 
 
-export function DeleteTodo() {
+export function ShowTodo() {
 
 
     const databases = new Databases(client)

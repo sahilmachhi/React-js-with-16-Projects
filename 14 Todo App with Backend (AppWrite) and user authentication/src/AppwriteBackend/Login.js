@@ -2,7 +2,7 @@
 import { Account, Client } from "appwrite"
 import backendData from "../assets/env"
 
-export function signin() {
+export function LogIn(email, password) {
 
     // const account = new Account(client);
     // console.log(client)
@@ -14,11 +14,12 @@ export function signin() {
     const account = new Account(client);
 
 
-    const promise = account.createEmailSession('whonix29@gmail.com', 'sahilsss');
+    const promise = account.createEmailSession(email, password);
 
     promise.then((res) => {
         console.log("promise got respose")
         console.log(res)
+        console.log("user login successful")
     }, (err) => {
         console.log("promise got error")
         console.log(err)

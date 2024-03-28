@@ -6,7 +6,7 @@ export function SignIn(email, username, password) {
 
     promise.then((res) => {
         console.log(res);
-        LogIn(email, password)
+        LogIn(username, password)
         console.log("account create successful");
     }, (err) => {
         console.log(err);

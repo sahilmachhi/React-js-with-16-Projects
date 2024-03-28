@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { store } from "./Store/Store.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LoginForm from "./Components/Login/Login.jsx";
+import SignInForm from "./Components/Signin/Signin.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LoginForm />,
+  },
+  {
+    path: "/signin",
+    element: <SignInForm />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

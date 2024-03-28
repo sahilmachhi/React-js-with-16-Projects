@@ -8,13 +8,16 @@ export function LogIn(email, password) {
     // console.log(client)
     // console.log(account)
 
-    const client = new Client()
-        .setEndpoint(backendData.appwriteUrl) // Your API Endpoint
-        .setProject(backendData.projectID);                 // Your project ID
+    const client = new Client();
+
     const account = new Account(client);
 
+    client
+        .setEndpoint(backendData.appwriteUrl) // Your API Endpoint
+        .setProject(backendData.databaseID) // Your project ID
+        ;
 
-    const promise = account.createEmailSession(email, password);
+    const promise = account.createEmailSession(email, password)
 
     promise.then((res) => {
         console.log("promise got respose")

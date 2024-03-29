@@ -1,11 +1,11 @@
 import Button from "../Button/Button";
-import Input from "../Input/Input";
-
+import InputBox from "../Input/Input";
+import { AddTodo } from "../../AppwriteTodoData/AddTodo";
 function TodoForm() {
   return (
     <>
       <form action="todoAdd" className="overflow-hidden rounded-2xl w-min flex">
-        <Input />
+        <InputBox />
         <Button btnText="Submit" />
       </form>
     </>

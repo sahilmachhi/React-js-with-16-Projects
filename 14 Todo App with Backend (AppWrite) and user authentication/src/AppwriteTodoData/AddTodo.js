@@ -3,14 +3,16 @@ import { Databases, ID } from "appwrite"
 import backendData from "../assets/env";
 
 
-export function AddTodo() {
+export function AddTodo(todoData) {
     const databases = new Databases(client)
 
     const promise = databases.createDocument(
         backendData.databaseID,
         backendData.collectionID,
         ID.unique(),
-        { "title": "first commit" }
+        {
+            todoTitle: todoData,
+        }
     )
 
     promise.then((res) => {

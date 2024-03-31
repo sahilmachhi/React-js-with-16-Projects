@@ -1,15 +1,16 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
+import Input from "./Input";
+import Button from "./Button";
 
 function Inputbox() {
   const input = useRef(null);
-  useEffect(() => {
-    input.current.focus();
-  }, []);
-
+  function handleClick() {
+    console.log(input.current.value);
+  }
   return (
     <>
-      <input type="text" ref={input} />
-      <button>submit</button>
+      <Input ref={input} />
+      <Button click={handleClick} />
     </>
   );
 }

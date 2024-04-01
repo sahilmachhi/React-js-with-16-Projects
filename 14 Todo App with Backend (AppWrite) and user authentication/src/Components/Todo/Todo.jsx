@@ -37,31 +37,30 @@ const todos = [
   },
 ];
 function Todo() {
-  let content;
-  switch (todos.isLoding) {
-    case "done":
-      return (content = "<p>not done</p>");
-      break;
-    case "loading":
-      return (content = "<p>not done</p>");
-      break;
-    case "notDone":
-      return (content = "<p>not done</p>");
-      break;
-    default:
-      break;
-  }
-
   return (
     <>
       {todos.map((todo) => {
+        let content;
+        switch (todo.isLoding) {
+          case "done":
+            content = "not done";
+            break;
+          case "loading":
+            content = "not done";
+            break;
+          case "notDone":
+            content = "not done";
+            break;
+          default:
+            break;
+        }
         return (
           <div className="bg-red-500 w-9/12 mx-auto px-2 py-4" key={todo.id}>
             <div className="flex items-center justify-between">
               {todo.todoDone ? <IoIosCheckbox /> : <RiCheckboxBlankLine />}
               <h1 className="text-3xl font-mono text-white">{todo.title}</h1>
               <MdDelete className="size-9" />
-              {content}
+              <p>{content}</p>
             </div>
           </div>
         );

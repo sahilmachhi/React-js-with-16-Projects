@@ -5,6 +5,11 @@ import { useRef } from "react";
 
 function TodoForm() {
   const inputVal = useRef(null);
+  function handleSubmit() {
+    AddTodo(inputVal.current.value);
+    inputVal.current.value = "";
+    inputVal.current.focus();
+  }
   return (
     <>
       <form action="todoAdd" className="overflow-hidden rounded-2xl w-min flex">

@@ -1,8 +1,11 @@
-import { AddTodo } from "../../AppwriteTodoData/AddTodo";
-
+// import { AddTodo } from "../../AppwriteTodoData/AddTodo";
+import { useDispatch } from "react-redux";
+import { showTodo } from "../../Store/Slice";
 function AddTodoForm() {
+  const dispatch = useDispatch();
   function submitData() {
-    AddTodo("anything");
+    // AddTodo("anything");
+    dispatch(showTodo());
     console.log("submit data done");
   }
   return (

@@ -3,14 +3,16 @@ import { client } from "../AppwriteBackend/UserAuth";
 import backendData from "../assets/env";
 
 
-export function ShowTodo(documentID) {
+export function ShowTodo() {
 
 
     const databases = new Databases(client)
-    const promise = databases.listDocuments(backendData.databaseID, backendData.collectionID, documentID);
+    const promise = databases.listDocuments(backendData.databaseID, backendData.collectionID);
+
 
     promise.then(function (response) {
-        console.log(response); // Success
+        const documents = response.documents;
+        console.log(documents); // Success
     }, function (error) {
         console.log(error); // Failure
     });

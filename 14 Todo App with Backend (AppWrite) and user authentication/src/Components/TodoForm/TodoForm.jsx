@@ -2,8 +2,10 @@ import Button from "../Button/Button";
 import InputBox from "../Input/Input";
 import { AddTodo } from "../../AppwriteTodoData/AddTodo";
 import { useRef } from "react";
+import { ShowTodo } from "../../AppwriteTodoData/ShowTodo";
 
 function TodoForm() {
+  ShowTodo();
   const inputVal = useRef(null);
   function handleSubmit() {
     AddTodo(inputVal.current.value);

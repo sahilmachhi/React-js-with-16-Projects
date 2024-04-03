@@ -13,6 +13,7 @@ export function ShowTodo() {
     promise.then(function (response) {
         const documents = response.documents;
         console.log(documents); // Success
+        return documents
     }, function (error) {
         console.log(error); // Failure
     });

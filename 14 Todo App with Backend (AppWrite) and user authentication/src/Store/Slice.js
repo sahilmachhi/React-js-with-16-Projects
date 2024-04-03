@@ -1,19 +1,36 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-const initialState = [{
-    todoID: null,
-    todoTitle: null,
-    todoComplete: false
-},]
+import { ShowTodo } from "../AppwriteTodoData/ShowTodo"
+const initialState = {
+    todoData: [],
+    isLoading: true,
+    isError: false,
+}
 
 const todoSlice = createSlice({
     name: "todos",
     initialState,
     reducers: {
-        showTodo: () => { console.log("showTodo Triggered") },
+        showTodo: () => {
+            const response = ShowTodo()
+            console.log("console logged from slice:", response)
+
+        },
         deleteTodo: () => { },
         addTodo: () => { },
         todoComplete: () => { }
+    },
+    extraReducers: (builder) => {
+        builder.addCase(ShowTodo.fullfilled, (state, action) => {
+            state.isLoading = false;
+            state.todoData = action.payload;
+        })
+        builder.addCase(ShowTodo.pending, (state, action) => {
+            state.isLoading = true;
+        })
+        builder.addCase(ShowTodo.rejected, (state, action) => {
+            console.log("error", action.payload)
+            state.isError = true;
+        })
     }
 })
 
